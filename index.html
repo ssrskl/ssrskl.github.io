@@ -1,187 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+	<meta charset="utf-8">
+	<title>爱心树表白动画（jQuery+Html5）</title>	    
+    <link type="text/css" rel="stylesheet" href="css/default.css">
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jscex.min.js"></script>
+	<script type="text/javascript" src="js/jscex-parser.js"></script>
+	<script type="text/javascript" src="js/jscex-jit.js"></script>
+	<script type="text/javascript" src="js/jscex-builderbase.min.js"></script>
+	<script type="text/javascript" src="js/jscex-async.min.js"></script>
+	<script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
+	<script type="text/javascript" src="js/functions.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/love.js" charset="utf-8"></script>
+	
+	<style type="text/css">
+		/*.STYLE1 {
+			color: #666666;
+		}*/
+	</style>
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+	<!--===音乐：原谅——刘瑞琦======================================-->
+	<audio autoplay>
+			<source src="music/forgive.mp3"/>
+	</audio>  
+	
+	<!--==============================================================-->
+	<div id="main">
+        <div id="error">
+        	抱歉！目前您的浏览器无法显示，请更新至最新版本或使用其他主流浏览器，谢谢合作。
+        </div>
+        <div id="wrap">
+            <div id="text">
+		        <div id="code">
+		      		<font color="#FF0000">  	
+		      			<span class="say">亲爱的小幸运，我爱你，虽然你看不见我对你的告白</span><br>
+						<span class="say"></span><br>
+						<span class="say">我知道我不会甜言蜜语，但是我会用行动证明一切</span><br>
+						<span class="say"></span><br>
+			        	<span class="say">你说我啰嗦，有些东西因为越在乎所以越失去</span><br>
+						<span class="say">因为我太爱你了，所以我失去你了</span><br>
+						<span class="say">因为我太啰嗦了，所以你离开了我</span><br>
+						<span class="say">虽然你看不见我的告白，但是我还是要把这些心里话说出来</span><br>
+						<span class="say"></span><br>
+                        <span class="say"><span class="space"></span> -- 爱你的人--</span>
+			  		</font>
+			  		</p>
+      			</div>
+            </div>
+		    <div id="clock-box">
+		        <span class="STYLE1"></span>
+		        <font color="#33CC00">亲爱的小幸运，我喜欢你</font>
+				<span class="STYLE1">已经是……</span>
+		        <div id="clock"></div>
+		    </div>
+		    <canvas id="canvas" width="1100" height="680"></canvas>
+	    </div>
+            
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/12/hello-world/" class="article-date">
-  <time datetime="2019-11-12T07:48:03.873Z" itemprop="datePublished">2019-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="这个是我的博客"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/12/hello-world/" data-id="ck2vk8iw9000034v55nw2hzjk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
 
-  
+	<!--==========================================================-->
+    <script>
+	    (function(){
+	        var canvas = $('#canvas');
+	        if (!canvas[0].getContext) {
+	            $("#error").show();
+	            return false;       
+	        }
+	
+	        var width = canvas.width();
+	        var height = canvas.height();        
+	        canvas.attr("width", width);
+	        canvas.attr("height", height);
+	        var opts = {
+	            seed: {
+	                x: width / 2 - 20,
+	                color: "rgb(190, 26, 37)",
+	                scale: 2
+	            },
+	            branch: [
+	                [535, 680, 570, 250, 500, 200, 30, 100, [
+	                    [540, 500, 455, 417, 340, 400, 13, 100, [
+	                        [450, 435, 434, 430, 394, 395, 2, 40]
+	                    ]],
+	                    [550, 445, 600, 356, 680, 345, 12, 100, [
+	                        [578, 400, 648, 409, 661, 426, 3, 80]
+	                    ]],
+	                    [539, 281, 537, 248, 534, 217, 3, 40],
+	                    [546, 397, 413, 247, 328, 244, 9, 80, [
+	                        [427, 286, 383, 253, 371, 205, 2, 40],
+	                        [498, 345, 435, 315, 395, 330, 4, 60]
+	                    ]],
+	                    [546, 357, 608, 252, 678, 221, 6, 100, [
+	                        [590, 293, 646, 277, 648, 271, 2, 80]
+	                    ]]
+	                ]] 
+	            ],
+	            bloom: {
+	                num: 700,
+	                width: 1080,
+	                height: 650,
+	            },
+	            footer: {
+	                width: 1200,
+	                height: 5,
+	                speed: 10,
+	            }
+	        }
+	
+	        var tree = new Tree(canvas[0], width, height, opts);
+	        var seed = tree.seed;
+	        var foot = tree.footer;
+	        var hold = 1;
+	
+	        canvas.click(function(e) {
+	            var offset = canvas.offset(), x, y;
+	            x = e.pageX - offset.left;
+	            y = e.pageY - offset.top;
+	            if (seed.hover(x, y)) {
+	                hold = 0; 
+	                canvas.unbind("click");
+	                canvas.unbind("mousemove");
+	                canvas.removeClass('hand');
+	            }
+	        }).mousemove(function(e){
+	            var offset = canvas.offset(), x, y;
+	            x = e.pageX - offset.left;
+	            y = e.pageY - offset.top;
+	            canvas.toggleClass('hand', seed.hover(x, y));
+	        });
+	
+	        var seedAnimate = eval(Jscex.compile("async", function () {
+	            seed.draw();
+	            while (hold) {
+	                $await(Jscex.Async.sleep(10));
+	            }
+	            while (seed.canScale()) {
+	                seed.scale(0.95);
+	                $await(Jscex.Async.sleep(10));
+	            }
+	            while (seed.canMove()) {
+	                seed.move(0, 2);
+	                foot.draw();
+	                $await(Jscex.Async.sleep(10));
+	            }
+	        }));
+	
+	        var growAnimate = eval(Jscex.compile("async", function () {
+	            do {
+	    	        tree.grow();
+	                $await(Jscex.Async.sleep(10));
+	            } while (tree.canGrow());
+	        }));
+	
+	        var flowAnimate = eval(Jscex.compile("async", function () {
+	            do {
+	    	        tree.flower(2);
+	                $await(Jscex.Async.sleep(10));
+	            } while (tree.canFlower());
+	        }));
+	
+	        var moveAnimate = eval(Jscex.compile("async", function () {
+	            tree.snapshot("p1", 240, 0, 610, 680);
+	            while (tree.move("p1", 500, 0)) {
+	                foot.draw();
+	                $await(Jscex.Async.sleep(10));
+	            }
+	            foot.draw();
+	            tree.snapshot("p2", 500, 0, 610, 680);
+	
+	            // 会有闪烁不得意这样做
+	            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+	            canvas.css("background", "#ffe");
+	            $await(Jscex.Async.sleep(300));
+	            canvas.css("background", "none");
+	        }));
+	
+	        var jumpAnimate = eval(Jscex.compile("async", function () {
+	            var ctx = tree.ctx;
+	            while (true) {
+	                tree.ctx.clearRect(0, 0, width, height);
+	                tree.jump();
+	                foot.draw();
+	                $await(Jscex.Async.sleep(25));
+	            }
+	        }));
+	
+	        var textAnimate = eval(Jscex.compile("async", function () {
+			    var together = new Date();
+			    together.setFullYear(2010,1 , 15); 			//时间年月日
+			    together.setHours(16);						//小时	
+			    together.setMinutes(53);					//分钟
+			    together.setSeconds(0);					//秒前一位
+			    together.setMilliseconds(2);				//秒第二位
+	
+			    $("#code").show().typewriter();
+	            $("#clock-box").fadeIn(500);
+	            while (true) {
+	                timeElapse(together);
+	                $await(Jscex.Async.sleep(1000));
+	            }
+	        }));
+	
+	        var runAsync = eval(Jscex.compile("async", function () {
+	            $await(seedAnimate());
+	            $await(growAnimate());
+	            $await(flowAnimate());
+	            $await(moveAnimate());
+	
+	            textAnimate().start();
+	
+	            $await(jumpAnimate());
+	        }));
+	
+	        runAsync().start();
+	    })();
+	    
+    </script>
     
-
-  
     
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/11/12/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
+	<!--=======附属说明====================================================-->
+	<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+		<p>
+			适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗， 不支持IE8及以下浏览器。
+		</p>
+	</div>
+	
+	
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
+	
+	
+	
+	
+	
 </body>
 </html>
